@@ -9,8 +9,11 @@ import numpy as np
 import json
 import os
 try:
-    from torchqrnn import QRNN
+    #from torchqrnn import QRNN
+    from fastai.text.models import *
+    from fastai.text.models.qrnn import QRNN
 except ImportError:
+    print('could not import QRNN')
     QRNN = None
 
 def format_frontend_chunk(batch, device='cpu'):
