@@ -52,8 +52,7 @@ def build_rnn_block(in_size, rnn_size, rnn_layers, rnn_type,
         if bidirectional:
             print('WARNING: QRNN ignores bidirectional flag')
             rnn_size = 2 * rnn_size
-        rnn = QRNN(in_size, rnn_size, rnn_layers, dropout=dropout, window=2,
-                   use_cuda=use_cuda)
+        rnn = QRNN(in_size, rnn_size, rnn_layers, dropout=dropout, window=2, )#use_cuda=use_cuda)
     elif rnn_type.lower() == 'lstm' or rnn_type.lower() == 'gru':
         rnn = getattr(nn, rnn_type.upper())(in_size, rnn_size, rnn_layers,
                                             dropout=dropout,
