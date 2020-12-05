@@ -14,13 +14,19 @@ This repository contains the official implementations of [PASE](https://arxiv.or
 *NOTE: Edit the cupy-cuda100 requirement in the file if needed depending on your CUDA version. Defaults to 10.0 now*
 
 ### Install 
+- `pip install -r requirements.txt`
+- Use QRNN from FastAI `pip install -Uqq fastai`
 
-This framework can be installed locally by running:
+Pase+ framework can be installed locally by running:
 
 ```
 python setup.py install
 ```
+or 
 
+```
+pip install git+https://github.com/kachiO/pase.git
+```
 This will allow you to import PASE modules from anywhere.
 
 ## Pre-trained Model
